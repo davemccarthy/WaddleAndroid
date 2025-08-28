@@ -75,7 +75,6 @@ fun WaddleUIApp() {
             } else {
                 MessageView(
                     message = gameViewModel.message,
-                    explanation = gameViewModel.dictionary.getExplanation(),
                     onClick = { gameViewModel.handleMessageClick() }
                 )
             }

@@ -183,7 +183,6 @@ fun KeyboardView(
 @Composable
 fun MessageView(
     message: String,
-    explanation: String,
     onClick: () -> Unit
 ) {
     Button(
@@ -208,23 +207,13 @@ fun MessageView(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            if (explanation.isEmpty()) {
-                Text(
-                    text = message,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White,
-                    textAlign = TextAlign.Center
-                )
-            } else {
-                Text(
-                    text = explanation,
-                    fontSize = 14.sp,
-                    color = Color.White,
-                    textAlign = TextAlign.Center,
-                    maxLines = 3
-                )
-            }
+            Text(
+                text = message,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White,
+                textAlign = TextAlign.Center
+            )
         }
     }
 }

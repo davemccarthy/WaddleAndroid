@@ -7,8 +7,7 @@ import java.io.InputStreamReader
 class Dictionary(private val context: Context) {
     private val contenders = mutableSetOf<String>() // Words that can be answers
     private val valids = mutableSetOf<String>()     // All valid words (including contenders)
-    private var explanation = ""
-    
+
     init {
         loadDictionary()
     }
@@ -50,16 +49,5 @@ class Dictionary(private val context: Context) {
     
     fun randomWord(): String {
         return contenders.random().uppercase()
-    }
-    
-    fun explainWord(word: String) {
-        // You can implement word explanations here
-        explanation = "A 5-letter word meaning..."
-    }
-    
-    fun getExplanation(): String = explanation
-    
-    fun cancelQuery() {
-        explanation = ""
     }
 }

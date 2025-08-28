@@ -206,8 +206,6 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     
     fun handleMessageClick() {
         _message = ""
-        dictionary.cancelQuery()
-        
         if (game.over) {
             resetGame()
         }
@@ -216,7 +214,6 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     private fun handleWin() {
         val praise = praises[game.cursorY - 1].random()
         showMessage(praise)
-        dictionary.explainWord(getWord(game.cursorY - 1))
         game.over = true
     }
     
