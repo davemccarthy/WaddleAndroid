@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-debug-45:/xml_backup_rules.xml.flat",
+        "source": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.yourname.waddleui.app-debug-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.yourname.waddleui.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-debug-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-debug-45:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-main-47:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-debug-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.yourname.waddleui.app-debug-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.yourname.waddleui.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.yourname.waddleui.app-debug-45:/xml_backup_rules.xml.flat",
+        "source": "com.yourname.waddleui.app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-debug-45:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/davidmccarthy/.gradle/daemon/8.10.2/com.yourname.waddleui.app-main-47:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.yourname.waddleui.app-debug-45:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.yourname.waddleui.app-main-47:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.yourname.waddleui.app-debug-45:/xml_data_extraction_rules.xml.flat",
+        "source": "com.yourname.waddleui.app-main-47:/xml/data_extraction_rules.xml"
+    }
+]
