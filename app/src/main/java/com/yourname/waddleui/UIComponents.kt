@@ -19,15 +19,15 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun HeaderView(streak: Int, record: Int) {
-            Row(
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 8.dp)
                 .background(
-                    color = Color(0xFFFAFCFD), // Cool white background
+                    color = Color(0xDDCCFCFD), // Cool light bluw background
                     shape = RoundedCornerShape(12.dp)
                 )
-                .shadow(1.5.dp, RoundedCornerShape(5.dp))
+                .shadow(1.5.dp, RoundedCornerShape(2.dp))
                 .padding(12.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
@@ -81,10 +81,10 @@ fun WordGridView(
                 //.fillMaxWidth()
                 .padding(8.dp)
                 .background(
-                    color = Color(0xFFFAFCFD), // Cool white background
+                    color = Color(0xDDCCFCFD), // Cool white background
                     shape = RoundedCornerShape(16.dp)
                 )
-                .shadow(1.5.dp, RoundedCornerShape(5.dp))
+                .shadow(1.5.dp, RoundedCornerShape(2.dp))
                 .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
@@ -132,10 +132,10 @@ fun KeyboardView(
             .fillMaxWidth()
             .padding(8.dp)
             .background(
-                color = Color(0xFFFAFCFD), // Cool white background
+                color = Color(0xDDCCFCFD), // Cool white background
                 shape = RoundedCornerShape(12.dp)
             )
-            .shadow(1.5.dp, RoundedCornerShape(5.dp))
+            .shadow(1.5.dp, RoundedCornerShape(2.dp))
             .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {

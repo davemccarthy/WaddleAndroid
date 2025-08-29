@@ -40,7 +40,7 @@ fun WaddleUIApp() {
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        Color(0xFFF8FBFC), // Very light blue-gray
+                        Color.Black, // Very light blue-gray
                         Color(0xFFF0F5F8)  // Light blue-gray
                     )
                 )
