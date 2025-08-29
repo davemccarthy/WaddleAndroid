@@ -48,6 +48,7 @@ class Dictionary(private val context: Context) {
     }
     
     fun randomWord(): String {
+        return "fetal".uppercase()
         return contenders.random().uppercase()
     }
 }

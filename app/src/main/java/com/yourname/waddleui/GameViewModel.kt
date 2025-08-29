@@ -115,13 +115,38 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         val newGrid = _grid.toMutableList()
         val newEntries = newGrid[row].entries.toMutableList()
         
+        // Create a map to track remaining letters in the answer
+        val answerLetterCounts = mutableMapOf<Char, Int>()
+        for (char in game.answer) {
+            answerLetterCounts[char] = answerLetterCounts.getOrDefault(char, 0) + 1
+        }
+        
+        // First pass: mark exact matches (green) and update counts
+        val statuses = Array(5) { LetterStatus.OUTCAST }
+        for (i in 0..4) {
+            val guessLetter = word[i]
+            val answerLetter = game.answer[i]
+            
+            if (guessLetter == answerLetter) {
+                statuses[i] = LetterStatus.POSITIONED
+                answerLetterCounts[guessLetter] = answerLetterCounts[guessLetter]!! - 1
+            }
+        }
+        
+        // Second pass: mark misplaced letters (yellow) if there are still remaining instances
+        for (i in 0..4) {
+            val guessLetter = word[i]
+            
+            if (statuses[i] != LetterStatus.POSITIONED && answerLetterCounts.getOrDefault(guessLetter, 0) > 0) {
+                statuses[i] = LetterStatus.ILLPOSITIONED
+                answerLetterCounts[guessLetter] = answerLetterCounts[guessLetter]!! - 1
+            }
+        }
+        
+        // Apply the statuses to the grid
         for (i in 0..4) {
             val letter = word[i].toString()
-            val status = when {
-                letter == game.answer[i].toString() -> LetterStatus.POSITIONED
-                game.answer.contains(letter) -> LetterStatus.ILLPOSITIONED
-                else -> LetterStatus.OUTCAST
-            }
+            val status = statuses[i]
             
             newEntries[i] = newEntries[i].copy(
                 foreground = when (status) {
@@ -214,6 +239,10 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     private fun handleWin() {
         val praise = praises[game.cursorY - 1].random()
         showMessage(praise)
+
+        if (++_streak > _record){
+            _record = _streak
+        }
         game.over = true
     }
     
