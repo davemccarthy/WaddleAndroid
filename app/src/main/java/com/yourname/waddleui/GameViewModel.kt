@@ -238,7 +238,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     
     private fun handleWin() {
         val praise = praises[game.cursorY - 1].random()
-        showMessage(praise)
+        showMessage("$praise: ${game.answer}")
 
         if (++_streak > _record){
             _record = _streak
@@ -247,7 +247,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     }
     
     private fun handleLoss() {
-        showMessage(game.answer)
+        showMessage("THE WORD WAS ${game.answer}")
         game.over = true
     }
     
